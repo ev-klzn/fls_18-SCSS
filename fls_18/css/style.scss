@@ -194,7 +194,7 @@ $main: green;
     color: #fff;
     background-color: $main;
 
-    // для уточняющего рядом класса
+    // два класса рядом, для уточняющего рядом класса
     &.button {
         background-color: #000;
     }
