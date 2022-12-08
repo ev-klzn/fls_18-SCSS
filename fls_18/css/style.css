@@ -124,6 +124,11 @@ body {
           flex-direction: column;
   height: 100%;
 }
+@media (min-width: 1140px) {
+  .item-block {
+    max-width: 350px;
+  }
+}
 .item-block__picture {
   padding: 0px 0px 74.285% 0px;
 }
@@ -138,8 +143,8 @@ body {
           flex-direction: column;
   background-color: #333;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 .item-block__body *:not(:last-child) {
   margin: 0px 0px 15px 0px;
@@ -168,9 +173,15 @@ body {
 .item-block__button .button {
   background-color: rgb(178, 13, 13);
 }
-
-@media (min-width: 1140px) {
-  .item__block {
-    max-width: 350px;
-  }
+.item-block__button::before {
+  content: "";
+}
+.item-block__button::after {
+  content: "";
+}
+.item-block__button:hover {
+  background-color: rgb(8, 207, 247);
+}
+.loading .item-block__button {
+  background-color: rgb(223, 104, 104);
 }

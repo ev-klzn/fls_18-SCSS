@@ -148,6 +148,10 @@ $main: green;
     flex-direction: column;
     height: 100%;
 
+    @media (min-width: 1140px) {
+        max-width: 350px;
+    }
+
     // .item-block__picture
 
     &__picture {
@@ -169,15 +173,13 @@ $main: green;
         display: flex;
         flex-direction: column;
         background-color: #333;
-        flex: 1 1 100%;
+        flex: 1 1 auto;
         // позволяем увеличиваться боди
-    }
 
-    &__body *:not(:last-child) {
-        margin: 0px 0px 15px 0px;
+        *:not(:last-child) {
+            margin: 0px 0px 15px 0px;
+        }
     }
-
-    // .item-block__title
 
     &__title {
         font-size: 40px;
@@ -211,11 +213,24 @@ $main: green;
         .button {
             background-color: rgb(178, 13, 13);
         }
-    }
-}
 
-@media (min-width: 1140px) {
-    .item__block {
-        max-width: 350px;
+        &::before {
+            content: '';
+
+        }
+
+        &::after {
+            content: '';
+
+        }
+
+        &:hover {
+            background-color: rgb(8, 207, 247);
+        }
+
+        // loading и кнопка, для динамических классов js
+        .loading & {
+            background-color: rgb(223, 104, 104);
+        }
     }
 }
