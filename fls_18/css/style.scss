@@ -64,7 +64,6 @@ body {
 
     img {
         object-fit: cover;
-        // object-position: center;
         // object-position: top;
         position: absolute;
         width: 100%;
@@ -119,88 +118,104 @@ $main: green;
 
 // Переменные end-------------------------------------------
 
-// Вложенность ---------------------------------------------
 
-// Вложенность end------------------------------------------
+.block {
 
-.block {}
+    // .block__container
 
-.block__container {}
+    &__container {}
 
-.block__items {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 30px;
-    margin: 0px -15px;
-}
+    // .block__items
 
-.block__item {
-    padding: 0px 15px;
-    flex: 1 1 33.333%;
-    min-width: 290px;
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        margin: 0px -15px;
+    }
+
+    // .block__item
+
+    &__item {
+        padding: 0px 15px;
+        flex: 1 1 33.333%;
+        min-width: 290px;
+    }
 }
 
 .item-block {
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    // .item-block__picture
+
+    &__picture {
+        padding: 0px 0px 74.285% 0px;
+        // 1110 - 30 row-gap - 30 row-gap / 3 = ширина 350 карточки товара
+        //высота карточки по макету делим на ширину карточки по макету и умножаем на 100
+        // 260/350*100=74,285
+        // + технический  клас _ibg
+    }
+
+    // .item-block__image
+
+    &__image {}
+
+    // .item-block__body
+
+    &__body {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
+        flex: 1 1 100%;
+        // позволяем увеличиваться боди
+    }
+
+    &__body *:not(:last-child) {
+        margin: 0px 0px 15px 0px;
+    }
+
+    // .item-block__title
+
+    &__title {
+        font-size: 40px;
+        color: #fff;
+    }
+
+    // .item-block__text
+
+    &__text {
+        line-height: 150%;
+        color: #eee;
+        font-size: 16px;
+        flex: 1 1 100%;
+        // прибиваем кнопку к низу
+    }
+
+    // .item-block__button
+
+    &__button {
+        padding: 10px 15px;
+        text-align: center;
+        color: #fff;
+        background-color: $main;
+
+        // два класса рядом, для уточняющего рядом класса
+        &.button {
+            background-color: #000;
+        }
+
+        // для вложенного класса
+        .button {
+            background-color: rgb(178, 13, 13);
+        }
+    }
 }
 
 @media (min-width: 1140px) {
     .item__block {
         max-width: 350px;
-    }
-}
-
-.item-block__picture {
-    padding: 0px 0px 74.285% 0px;
-    // 1110 - 30 row-gap - 30 row-gap / 3 = ширина 350 карточки товара
-    //высота карточки по макету делим на ширину карточки по макету и умножаем на 100
-    // 260/350*100=74,285
-    // + технический  клас _ibg
-}
-
-// .item-block__image {}
-
-.item-block__body {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    background-color: #333;
-    flex: 1 1 100%;
-    // позволяем увеличиваться боди
-}
-
-.item-block__body *:not(:last-child) {
-    margin: 0px 0px 15px 0px;
-}
-
-.item-block__title {
-    font-size: 40px;
-    color: #fff;
-}
-
-.item-block__text {
-    line-height: 150%;
-    color: #eee;
-    font-size: 16px;
-    flex: 1 1 100%;
-    // прибиваем кнопку к низу
-}
-
-.item-block__button {
-    padding: 10px 15px;
-    text-align: center;
-    color: #fff;
-    background-color: $main;
-
-    // два класса рядом, для уточняющего рядом класса
-    &.button {
-        background-color: #000;
-    }
-
-    // для вложенного класса
-    .button {
-        background-color: rgb(178, 13, 13);
     }
 }
