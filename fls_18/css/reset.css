@@ -1,3 +1,4 @@
+/* reset  ------------------------------ */
 *,
 *::before,
 *::after {
@@ -52,7 +53,6 @@ html {
 ._ibg {
   position: relative;
 }
-
 ._ibg img {
   -o-object-fit: cover;
      object-fit: cover;
