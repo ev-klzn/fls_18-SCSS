@@ -1,4 +1,4 @@
-/* reset  ------------------------------ */
+/* reset  -------------------------------------------------------------------- */
 *,
 *::before,
 *::after {
@@ -63,8 +63,8 @@ html {
   left: 0;
 }
 
-/* reset end ------------------------------ */
-/* media ---------------------------------- */
+/* reset end -------------------------------------------------------------------- */
+/* media -------------------------------------------------------------------- */
 [class*=__container] {
   max-width: 1050px;
   margin: 0px auto;
@@ -86,7 +86,7 @@ html {
     max-width: none;
   }
 }
-/* media end ------------------------------ */
+/* media end ---------------------------------------------------------------- */
 body {
   line-height: 1;
   color: #000;
@@ -106,27 +106,6 @@ body {
           flex-direction: column;
 }
 
-[class*=__container] {
-  max-width: 1140px;
-  margin: 0px auto;
-  padding: 0px 15px;
-}
-
-@media (max-width: 1140px) {
-  [class*=__container] {
-    max-width: 970px;
-  }
-}
-@media (max-width: 991.98px) {
-  [class*=__container] {
-    max-width: 750px;
-  }
-}
-@media (max-width: 767.98px) {
-  [class*=__container] {
-    max-width: none;
-  }
-}
 .block__items {
   display: -webkit-box;
   display: -ms-flexbox;
