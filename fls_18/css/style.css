@@ -1,4 +1,5 @@
 /* reset  -------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700,900&display=swap");
 *,
 *::before,
 *::after {
@@ -66,12 +67,12 @@ html {
 /* reset end -------------------------------------------------------------------- */
 /* media -------------------------------------------------------------------- */
 [class*=__container] {
-  max-width: 1050px;
+  max-width: 1140px;
   margin: 0px auto;
   padding: 0px 15px;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1140px) {
   [class*=__container] {
     max-width: 970px;
   }
