@@ -1,4 +1,5 @@
 @import "reset.scss";
+@import "media.scss";
 
 body {
     line-height: 1;
@@ -13,15 +14,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-// 1050 из макета (контейнер + отступы)
-@media (max-width: 1140px) {}
-
-// Условные планшеты
-@media (max-width: 991.98px) {}
-
-// Условные мобилки
-@media (max-width: 767.98px) {}
 
 [class*="__container"] {
     max-width: 1140px;
@@ -164,7 +156,7 @@ $main: green;
         }
 
         &:hover {
-            background-color: rgb(8, 207, 247);
+            color: rgb(8, 207, 247);
         }
 
         // loading и кнопка, для динамических классов js
