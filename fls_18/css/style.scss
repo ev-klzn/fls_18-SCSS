@@ -154,4 +154,94 @@ $main: green;
     border: 1px solid $color;
 }
 
+// Миксин ibg
+
+@mixin ibg($position: center) {
+    position: relative;
+
+    img {
+        object-fit: cover;
+        object-position: $position;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+// вызывем миксин ibg и меняем значение на left
+
+.item {
+    @include ibg(left);
+}
+
+
 //  миксин end
+
+// Шаблоны, не попадают в код пока мы его не вызовим
+
+// Пример шаблона, их нельзя изменять, они статичны.
+%ibg {
+    position: relative;
+
+    img {
+        object-fit: cover;
+        object-position: top;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+// вызываем шаблон
+
+.item-block {
+
+    &__picture {
+        @extend %ibg;
+    }
+}
+
+// шаблон end
+
+
+// Выпадающее меню
+.list {
+    padding: 30px;
+    // .list__item
+
+    &__item {
+        transform: translate(-100%, 0px);
+        transition: 0.3s;
+
+        @for $var from 1 to 5 {
+            $delay: 0.1 * $var;
+
+            &:nth-child(#{$var}) {
+                transition-delay: $delay + s;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    // .list__link
+
+    &__link {
+        color: white;
+    }
+
+    &:hover {
+        .list__item {
+            transform: translate(0px, 0px);
+        }
+    }
+}
+
+// Выпадающее меню end
+
