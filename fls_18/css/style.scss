@@ -48,6 +48,12 @@ $main: green;
     }
 }
 
+// вызывем миксин
+@mixin theme($color) {
+    background-color: $color;
+    border: 5px solid $color;
+}
+
 .item-block {
     display: flex;
     flex-direction: column;
@@ -130,7 +136,7 @@ $main: green;
         }
 
         &:hover {
-            color: rgb(8, 207, 247);
+            @include theme(green);
         }
 
         // loading и кнопка, для динамических классов js
@@ -139,3 +145,13 @@ $main: green;
         }
     }
 }
+
+// Миксины - набор настраемого кода, должен быть выше чем выхов его кода include
+// есть этот код выше чтобы миксин сработал
+
+@mixin theme($color) {
+    background-color: $color;
+    border: 1px solid $color;
+}
+
+//  миксин end

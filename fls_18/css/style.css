@@ -1,4 +1,6 @@
 /* reset  -------------------------------------------------------------------- */
+/* &display=swap*/
+/*&subset=cyrillic-ext*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700,900&display=swap");
 *,
 *::before,
@@ -190,7 +192,8 @@ body {
   content: "";
 }
 .item-block__button:hover {
-  color: rgb(8, 207, 247);
+  background-color: green;
+  border: 5px solid green;
 }
 .loading .item-block__button {
   background-color: rgb(223, 104, 104);
